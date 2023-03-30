@@ -17,12 +17,10 @@
 <style scoped>
 
 .home-container {
-  background: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 .title {
   font-size: 2.5rem;
