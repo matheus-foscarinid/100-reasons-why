@@ -29,7 +29,7 @@ const pushReason = async (reason) => {
     const reasonsJSON = await getAllReasons();
     
     reasonsJSON.push(reason);
-    fs.writeFileSync(JSON_PATH, JSON.stringify(reasonsJSON));
+    fs.writeFileSync(JSON_PATH, JSON.stringify(reasonsJSON, null, 2), );
   } catch (error) {
     console.error(error);
     throw error;
