@@ -1,22 +1,43 @@
 <template>
   <div class="home-container">
-    <h1 class="title">100 reasons why</h1>
-  
-    <img 
-      src="src/images/hearts.png"
-      class="hearts"
-    >
-  
-    <img 
-      src="src/images/pot.png"
-      class="pot" 
-    >
+    <div class="animation-container">
+      <h1 class="title">100 reasons why</h1>
+    
+      <img 
+        src="src/images/hearts.png"
+        class="hearts"
+      >
+    
+      <img 
+        src="src/images/pot.png"
+        class="pot" 
+      >
+    </div>
+
+    <div class="reasons-container">
+      <ReasonsMenu />
+    </div>
   </div>
 </template>
+
+<script setup>
+import ReasonsMenu from '@/components/ReasonsMenu.vue'
+</script>
 
 <style scoped>
 
 .home-container {
+  display: flex;
+}
+
+.reasons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-container {
   display: flex;
   flex-direction: column;
   align-items: center;
