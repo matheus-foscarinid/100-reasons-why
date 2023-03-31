@@ -1,12 +1,19 @@
 import { describe, test, expect, vi } from 'vitest';
 import { reasonsService } from './reasons.service.js';
 
-vi.mock('fs', () => ({
-  default: () => ({
-    readFileSync: () => {},
-    writeFileSync: () => {}
-  })
-}));
+const jsonMock = ['test reason'];
+
+vi.mock('fs', () => {
+  const returnJson = () => JSON.stringify(jsonMock);
+
+  return {
+    default: {
+      readFileSync: vi.fn().mockImplementation(returnJson),
+      writeFileSync: vi.fn(),
+    }
+  }
+});
+
 
 describe('Reasons service', () => {
   test('getAllReasons should return an array of reasons', async () => {
@@ -16,7 +23,7 @@ describe('Reasons service', () => {
 
   test('getReasonByIndex should return a reason', async () => {
     const reason = await reasonsService.getReasonByIndex(0);
-    expect(typeof reason).toBe('string');
+    expect(reason).toBe(jsonMock[0]);
   });
 
   test('pushReason should add a reason', async () => {
