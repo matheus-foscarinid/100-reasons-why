@@ -31,7 +31,9 @@ import ReasonsMenu from '@/components/ReasonsMenu.vue'
 }
 
 .reasons-container {
+  margin: 5rem;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
