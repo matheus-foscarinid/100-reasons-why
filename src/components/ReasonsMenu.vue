@@ -31,6 +31,8 @@
 </template>
 
 <script setup>
+import reasonsService from '@/services/reasons.service.js'
+
 const seeRandomReason = () => {
   console.log('seeRandomReason')
 }
@@ -41,6 +43,8 @@ const openReasonSelection = () => {
 
 const seeAllReasons = () => {
   console.log('seeAllReasons')
+  const reasons = reasonsService.getAllReasons()
+  console.log(reasons)
 }
 
 const openAddReason = () => {

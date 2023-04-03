@@ -36,7 +36,7 @@ const pushReason = async (reason) => {
   }
 };
 
-export const reasonsService = {
+export default {
   getAllReasons,
   getReasonByIndex,
   pushReason
