@@ -1,21 +1,23 @@
 <template>
-  <div class="home-container">
-    <div class="animation-container">
-      <h1 class="title">100 reasons why</h1>
-    
-      <img 
-        src="src/images/hearts.png"
-        class="hearts"
-      >
-    
-      <img 
-        src="src/images/pot.png"
-        class="pot" 
-      >
-    </div>
+  <div>
+    <h1 class="title">100 reasons why</h1>
+    <div class="home-container">
+      <div class="animation-container">
+      
+        <img 
+          src="src/images/hearts.png"
+          class="hearts"
+        >
+      
+        <img 
+          src="src/images/pot.png"
+          class="pot" 
+        >
+      </div>
 
-    <div class="reasons-container">
-      <ReasonsMenu />
+      <div class="reasons-container">
+        <ReasonsMenu />
+      </div>
     </div>
   </div>
 </template>
@@ -31,7 +33,6 @@ import ReasonsMenu from '@/components/ReasonsMenu.vue'
 }
 
 .reasons-container {
-  margin: 5rem;
   display: flex;
   flex: 1;
   flex-direction: column;

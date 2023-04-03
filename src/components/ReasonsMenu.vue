@@ -1,24 +1,51 @@
 <template>
   <div class="container">
-    <button class="base-btn">
+    <button 
+      class="base-btn"
+      @click="seeRandomReason"
+    >
       See random reason
     </button>
 
-    <button class="base-btn">
+    <button 
+      class="base-btn"
+      @click="openReasonSelection"
+    >
       Select reason
     </button>
 
-    <button class="base-btn">
+    <button 
+      class="base-btn"
+      @click="seeAllReasons"
+    >
       See complete list
     </button>
 
-    <button class="base-btn">
+    <button
+      class="base-btn"
+      @click="openAddReason"
+    >
       Add reason
     </button>
   </div>
 </template>
 
 <script setup>
+const seeRandomReason = () => {
+  console.log('seeRandomReason')
+}
+
+const openReasonSelection = () => {
+  console.log('openReasonSelection')
+}
+
+const seeAllReasons = () => {
+  console.log('seeAllReasons')
+}
+
+const openAddReason = () => {
+  console.log('openAddReason')
+}
   
 </script>
 
