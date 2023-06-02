@@ -1,13 +1,16 @@
 <template>
   <div>
-    <h1 class="title">100 reasons why</h1>
     <div class="home-container">
-      <div class="animation-container">
-      
+      <div
+        v-if="!showReasonsMenu"
+        class="animation-container"
+      >
         <img 
           src="src/images/hearts.png"
           class="hearts"
         >
+
+        <h1 class="title">100 reasons why</h1>
       
         <img 
           src="src/images/pot.png"
@@ -15,7 +18,10 @@
         >
       </div>
 
-      <div class="reasons-container">
+      <div
+        v-else
+        class="reasons-container"
+      >
         <ReasonsMenu />
       </div>
     </div>
