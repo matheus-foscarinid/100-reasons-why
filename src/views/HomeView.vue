@@ -32,10 +32,12 @@
 import ReasonsMenu from '@/components/ReasonsMenu.vue'
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 .home-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .reasons-container {
@@ -51,27 +53,28 @@ import ReasonsMenu from '@/components/ReasonsMenu.vue'
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 1rem;
-}
 
-.pot {
-  width: 400px;
-  height: fit-content;
-  align-self: center;
-  transition: all 0.3s ease;
-  animation: float 4s ease-in-out infinite;
-  margin-top: -300px;
-}
+  .pot {
+    width: 400px;
+    height: fit-content;
+    align-self: center;
+    transition: all 0.3s ease;
+    animation: float 4s ease-in-out infinite;
+    margin-top: -300px;
+  }
 
-.hearts {
-  width: 800px;
-  height: fit-content;
-  animation: vertical-floating 6s ease-in-out infinite;
+  .hearts {
+    width: 800px;
+    height: fit-content;
+    animation: vertical-floating 6s ease-in-out infinite;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+  }
 }
 
 @keyframes float {
