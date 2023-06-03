@@ -5,13 +5,13 @@
         v-if="!showReasonsMenu"
         class="animation-container"
       >
+        <h1 class="title">100 reasons why</h1>
+
         <img 
           src="src/images/hearts.png"
           class="hearts"
         >
 
-        <h1 class="title">100 reasons why</h1>
-      
         <img 
           src="src/images/pot.png"
           class="pot" 
@@ -35,6 +35,7 @@ import ReasonsMenu from '@/components/ReasonsMenu.vue'
 <style scoped lang="scss">
 
 .home-container {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +56,7 @@ import ReasonsMenu from '@/components/ReasonsMenu.vue'
   justify-content: center;
 
   .pot {
-    width: 400px;
+    width: 300px;
     height: fit-content;
     align-self: center;
     transition: all 0.3s ease;
@@ -64,7 +65,7 @@ import ReasonsMenu from '@/components/ReasonsMenu.vue'
   }
 
   .hearts {
-    width: 800px;
+    width: 600px;
     height: fit-content;
     animation: vertical-floating 6s ease-in-out infinite;
   }
@@ -73,7 +74,6 @@ import ReasonsMenu from '@/components/ReasonsMenu.vue'
     font-size: 2.5rem;
     font-weight: 700;
     color: #333;
-    text-align: center;
   }
 }
 
