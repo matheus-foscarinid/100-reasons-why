@@ -16,6 +16,13 @@
           src="src/images/pot.png"
           class="pot" 
         >
+
+        <button
+          @click="showReasonsMenu = true"
+          class="show-reasons-button"
+        >
+          Show reasons
+        </button>
       </div>
 
       <div
@@ -30,6 +37,9 @@
 
 <script setup>
 import ReasonsMenu from '@/components/ReasonsMenu.vue'
+import { ref } from 'vue'
+
+const showReasonsMenu = ref(false)
 </script>
 
 <style scoped lang="scss">
@@ -74,6 +84,25 @@ import ReasonsMenu from '@/components/ReasonsMenu.vue'
     font-size: 2.5rem;
     font-weight: 700;
     color: #333;
+  }
+
+  .show-reasons-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 100;
+
+    &:hover {
+      background-color: #444;
+      transform: scale(1.1);
+      box-shadow: 0 7px 7px rgba(0, 0, 0, 0.15);
+    }
   }
 }
 
