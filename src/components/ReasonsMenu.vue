@@ -30,7 +30,7 @@
 
     <button
       class="base-btn return"
-      @click="openAddReason"
+      @click="returnToHome"
     >
       Return
     </button>
@@ -52,6 +52,10 @@ const seeAllReasons = () => {
 
 const openAddReason = () => {
   console.log('openAddReason')
+}
+
+const returnToHome = () => {
+  console.log('returnToHome')
 }
   
 </script>
