@@ -27,6 +27,13 @@
     >
       Add reason
     </button>
+
+    <button
+      class="base-btn return"
+      @click="openAddReason"
+    >
+      Return
+    </button>
   </div>
 </template>
 
@@ -49,7 +56,7 @@ const openAddReason = () => {
   
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .container {
     display: flex;
     flex-direction: column;
@@ -63,5 +70,18 @@ const openAddReason = () => {
 
   .base-btn {
     width: 100%;
+
+    &.return {
+      margin-top: 1rem;
+      background: #121212;
+
+      &:hover {
+        background: #1c1c1c;
+      }
+
+      &:active {
+        background: #0d0d0d;
+      }
+    }
   }
 </style>
